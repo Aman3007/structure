@@ -1,0 +1,16 @@
+.navrow{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+  
+}
+.active-link{
+text-decoration: none;
+  color: red;
+}
+
+.Nav:hover{
+text-decoration: none;
+  color: rgb(0, 255, 21);
+}
