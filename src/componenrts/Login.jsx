@@ -5,7 +5,12 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const [formData, setFormData] = useState({ name: "", email: "" });
     const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/register");  
+  };
        const handleChange=(event)=>{
 
 
@@ -66,24 +71,50 @@ const{name,value}=event.target;
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+       <div className="login-form">
+      <form class="form" onSubmit={handleSubmit}>
+     <span class="input-span">
+    <label for="username"  class="label">UserName</label>
+    <input type="text"  name="name"  value={formData.name}  onChange={handleChange}   id="name"
+  />
+          {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+  </span>
+  <span class="input-span">
+    <label for="email" class="label">Email</label>
+    <input type="email"  value={formData.email}  onChange={handleChange}  name="email" id="email"
+  />  {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}</span>
+ 
+  
+  <input class="submit" type="submit" value="Log in" />
+  <span class="span">Don't have an account? <a href="" onClick={handleClick}>Sign up</a></span>
+</form>
+  </div>
+
+
+
+
+   {/* <form onSubmit={handleSubmit}>
       <input 
         name="name" 
         value={formData.name} 
         onChange={handleChange} 
         placeholder="Name" 
       />
-      {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+
       <input 
         name="email" 
         value={formData.email} 
         onChange={handleChange} 
         placeholder="Email" 
       />
-         {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+       
       <button type="submit">Submit</button>
-    </form>
+    </form> */}
+    </>
+   
   );
 }
 
 export default Login;
+
