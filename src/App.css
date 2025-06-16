@@ -5,12 +5,351 @@
   padding: 1rem;
   
 }
-.active-link{
-text-decoration: none;
-  color: red;
-}
 
+.Nav{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+text-decoration: none;
+ 
+}
+.active-link{
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(243, 223, 41);
+}
 .Nav:hover{
 text-decoration: none;
-  color: rgb(0, 255, 21);
+  color: rgb(243, 223, 41);
+}
+#Navbar {
+  background-color: rgb(19, 18, 18);
+}
+
+#footer{
+    border-top: 2px solid rgb(245, 242, 242);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+ 
+  width: 100%;
+ background: #c3228b;
+background: linear-gradient(16deg, rgb(14, 13, 13) 0%, rgb(8, 8, 8) 100%);
+}
+#footer div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer div p {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+#footer div p a{
+padding-left: 4rem;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  
+}
+
+
+/* From Uiverse.io by joe-watson-sbf */ 
+.flip-card {
+  background-color: transparent;
+  width: 25rem;
+  height: 28rem;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.3em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, rgb(92, 92, 92) 60%, rgb(245, 243, 243) 88%,
+     rgb(253, 251, 250) 40%, rgba(248, 238, 238, 0.993) 48%);
+  color: coral;
+}
+
+.flip-card-back {
+  padding: 2rem;
+  background: linear-gradient(120deg, rgb(206, 205, 204) 30%, rgb(7, 7, 7) 88%);
+    
+  color: rgb(245, 243, 243);
+  transform: rotateY(180deg);
+}
+.flip-card-back h2 {
+margin-bottom: 1rem;
+color: coral;
+}
+.flip-card-back p{
+margin-bottom: 2.5rem;
+
+}
+.middle-part{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* From Uiverse.io by BHARGAVPATEL1244 */ 
+button {
+
+ outline: none;
+ cursor: pointer;
+ border: none;
+ padding: 0.9rem 2rem;
+ margin: 0;
+ font-family: inherit;
+ font-size: inherit;
+ position: relative;
+ display: inline-block;
+ letter-spacing: 0.05rem;
+ font-weight: 700;
+ font-size: 17px;
+ border-radius: 500px;
+ overflow: hidden;
+ background: #66ff66;
+ color: ghostwhite;
+}
+
+button span {
+ position: relative;
+ z-index: 10;
+ transition: color 0.4s;
+}
+
+button:hover span {
+ color: black;
+}
+
+button::before,
+button::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+}
+
+button::before {
+ content: "";
+ background: #000;
+ width: 120%;
+ left: -10%;
+ transform: skew(30deg);
+ transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+ transform: translate3d(100%, 0, 0);
+}
+/* From Uiverse.io by bociKond */ 
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #58bc82;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form .input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+
+.form input[type="email"],
+.form input[type="text"] {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+}
+
+.form input[type="email"]:focus,
+.form input[type="name"]:focus {
+  outline: 2px solid var(--clr);
+}
+
+.label {
+  align-self: flex-start;
+  color: var(--clr);
+  font-weight: 600;
+}
+
+.form .submit {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form .submit:hover {
+  background-color: var(--clr);
+  color: var(--bg-dark);
+}
+
+.span {
+  text-decoration: none;
+  color: white;
+}
+
+.span a {
+  color: var(--clr);
+}
+.register-form{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.login-form{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* From Uiverse.io by github-bishwajeet */ 
+.card {
+  color: black;
+  width: 26rem;
+  height: 28rem;
+  border-radius: 44px;
+  background: lightgrey;
+  background: linear-gradient(145deg, #f59d9d, #474646);
+  box-shadow: 2px 3px 3px #f1efef,
+             2px 3px 3px #faf8f8;
+}
+
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  display: inline-block;
+  background-color: rgba(255,255,255,0.9);
+  margin: 30px 15px 20px 25px;
+  border-radius: 14px;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 33px;
+  width: 14rem;
+}
+
+.info-1, .info-2 {
+  display: inline-block;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.9);
+  padding: 0.6rem;
+}
+
+.info-2 {
+  padding: 0.6rem;
+  margin-top: 2rem;
+  height: 2.5;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.content-1 {
+  width: 80%;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.9);
+  padding: 0.5rem;
+  height: 4rem;
+  margin: 5rem auto;
+  margin-bottom: 2rem;
+}
+
+.content-2 {
+  width: 60%;
+  padding: 0.2rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.9);
+  height: 2rem;
+margin:  1rem auto;
+display: flex;
+justify-content: center;
+}
+.content-2 a:hover{
+   color: blue;
+   cursor: pointer;
+}
+.userinfo{
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
