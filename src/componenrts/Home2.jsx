@@ -6,13 +6,27 @@ const { user, token } = useLocation().state|| {};
   if (!user) return <p>No user info available.</p>;
 
   return (
-    <div>
-      <h2>User Info</h2>
-      <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Email:</strong> {user.email}</p>
-         <p><strong>Token:</strong> {token}</p>
-      {/* add more fields as needed */}
-    </div>
+    <>
+<div className="userinfo">
+<h2>User-Info</h2>
+  <div class="card">
+  <label class="avatar"></label>
+  <label class="info">
+    <span class="info-1">{user.name}</span>
+    <span class="info-2"> {user.email}</span>
+  </label>
+  <div class="content-1"><p>"You can trust us with your secrets, no need to worry."</p></div>
+  <div class="content-2">
+    <a>Add Your's</a>
+  </div>
+</div>
+</div>
+
+
+
+
+    </>
+   
   );
 }
 
