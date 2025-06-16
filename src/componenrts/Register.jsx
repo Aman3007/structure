@@ -56,8 +56,32 @@ const{name,value}=event.target;
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
+  return (<>
+  <div className="register-form">
+    <form class="form" onSubmit={handleSubmit}>
+     <span class="input-span">
+    <label for="username"  class="label">UserName</label>
+    <input type="text"  name="name"  value={formData.name}  onChange={handleChange}   id="name"
+  /></span>
+  <span class="input-span">
+    <label for="email" class="label">Email</label>
+    <input type="email"  value={formData.email}  onChange={handleChange}  name="email" id="email"
+  /></span>
+ 
+  
+  <input class="submit" type="submit" value="Sign up" />
+  
+</form>
+  </div>
+
+
+
+
+
+
+
+
+{/* <form onSubmit={handleSubmit}>
       <input 
         name="name" 
         value={formData.name} 
@@ -73,8 +97,11 @@ const{name,value}=event.target;
       />
          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
       <button type="submit">Submit</button>
-    </form>
+    </form> */}
+</>
+    
   );
 }
 
 export default Register;
+
